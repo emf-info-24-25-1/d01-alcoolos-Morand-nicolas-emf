@@ -1,29 +1,27 @@
 package app;
 
+import models.Ami; //Faut importer de l'autre package
+
 public class Application {
 
     public static void main(String[] args) {
-        Ami ami1;
-        ami1 = new Ami("Bernard", 8);
-        System.out.println(ami1.nom + " peut encore boire " + ami1.nbreBiereBuvable + " bières.");
+        //Déclaration et affectation des amis (comme des tableaux)
 
-        Ami ami2;
-        ami2 = new Ami("Jean", 4);
-        System.out.println(ami2.nom + " peut encore boire " + ami2.nbreBiereBuvable + " bières.");
+        Ami ami1 = new Ami("Bob", 3);
 
+        Ami ami2 = new Ami("Francis", 8);
 
-        Ami ami3;
-        ami3 = new Ami("Steve", 6);
-        System.out.println(ami3.nom + " peut encore boire " + ami3.nbreBiereBuvable + " bières.");
+        ami2.setNbreBiereBuvable(6);
 
         ami1.boitUneBiere();
+        ami1.boitUneBiere();
+        ami1.boitUneBiere();
+        ami1.boitUneBiere();
+
         ami2.boitUneBiere();
-        ami3.boitUneBiere();
+        ami2.boitUneBiere();
 
-        System.out.println(ami1.nom + " peut encore boire " + ami1.nbreBiereBuvable + " bières.");
-        System.out.println(ami2.nom + " peut encore boire " + ami2.nbreBiereBuvable + " bières.");
-        System.out.println(ami3.nom + " peut encore boire " + ami3.nbreBiereBuvable + " bières.");
-
-
+        System.out.println("Le nombre supportable de bières pour " + ami1.getNom() + " est de " + ami1.getNbreBiereBuvable());
+        System.out.println("Le nombre supportable de bières pour " + ami2.getNom() + " est de " + ami2.getNbreBiereBuvable());
     }
 }
